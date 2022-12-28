@@ -17,7 +17,7 @@ typedef void (*millisTimerEventHandler)(MillisTimer&);
 class MillisTimer
 {
   public:
-    MillisTimer(uint32_t interval = 0, milliesTimerEventHandler handler = NULL);
+    MillisTimer(uint32_t interval = 0, millisTimerEventHandler handler = NULL);
 
     void expiredHandler(millisTimerEventHandler handler);
     void setInterval(uint32_t interval);
@@ -44,7 +44,7 @@ class MillisTimer
     uint32_t m_interval;
     uint32_t m_repeat;
     uint32_t m_repeatCount;
-    milliesTimerEventHandler cb_onExpired;
+    millisTimerEventHandler cb_onExpired;
 };
 
 #endif
