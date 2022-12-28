@@ -12,14 +12,14 @@
 #endif
 
 class MillisTimer;
-typedef void (*milliesTimerEventHandler)(MillisTimer&);
+typedef void (*millisTimerEventHandler)(MillisTimer&);
 
 class MillisTimer
 {
   public:
     MillisTimer(uint32_t interval = 0, milliesTimerEventHandler handler = NULL);
 
-    void expiredHandler(milliesTimerEventHandler handler);
+    void expiredHandler(millisTimerEventHandler handler);
     void setInterval(uint32_t interval);
     void setRepeats(uint32_t repeat);      // number of times to repeat, (0) for indefinitely (default)
     void setTargetTime(uint32_t targetTime);
