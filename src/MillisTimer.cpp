@@ -1,7 +1,7 @@
 #include "MillisTimer.h"
 
 // Constructor
-MillisTimer::MillisTimer(uint32_t interval, MillisTimerEventHandler handler)
+MillisTimer::MillisTimer(uint32_t interval, millisTimerEventHandler handler)
 {
   m_interval = interval;
   m_state = STOPPED;                   // Stopped
@@ -137,7 +137,7 @@ void MillisTimer::setRepeats(uint32_t repeatCount)
 }
 
 
-void MillisTimer::expiredHandler(MillisTimerEventHandler handler)
+void MillisTimer::expiredHandler(millisTimerEventHandler handler)
 {
   cb_onExpired = handler;
 }
